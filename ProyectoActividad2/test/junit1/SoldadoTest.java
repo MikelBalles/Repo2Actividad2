@@ -8,7 +8,7 @@ class SoldadoTest {
 
 	@Test
 	void test() {
-		fail("Not yet implemented");
+		fail("Not yet imple mented");
 	}
 
 }
