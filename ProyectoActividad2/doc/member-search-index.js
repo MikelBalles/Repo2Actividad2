@@ -1,0 +1,1 @@
+memberSearchIndex = [{"p":"<Unnamed>","c":"Soldado","l":"disparar(Soldado)"},{"p":"<Unnamed>","c":"Soldado","l":"puedeDisparar()"},{"p":"<Unnamed>","c":"Soldado","l":"Soldado()","u":"%3Cinit%3E()"}];updateSearchResults();
