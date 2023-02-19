@@ -48,7 +48,7 @@ class TestJugador {
 			
 			j1.setNumeroTarjetasAmarillas(2);
 			assertTrue(j1.estaExpulsado());
-			
+		
 			j1.setNumeroTarjetasRojas(1);
 			assertTrue(j1.estaExpulsado());
 			

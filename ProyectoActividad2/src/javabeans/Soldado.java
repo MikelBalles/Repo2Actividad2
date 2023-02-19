@@ -2,8 +2,9 @@ package javabeans;
 
 /**
  * 
- * @author Javier
+ *@author Javier
  *@version 1.0
+ *
  */
 public class Soldado {
 	/**
