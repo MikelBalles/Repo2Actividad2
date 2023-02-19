@@ -46,7 +46,7 @@ private Soldado s2;
 		int nb = s2.getNumeroBalas();
 		
 		s2.disparar(s1);
-		assertEquals(s2.getNumeroBalas(), nb -1);
+		assertEquals(nb -1, s2.getNumeroBalas());
 		
 	}
 
