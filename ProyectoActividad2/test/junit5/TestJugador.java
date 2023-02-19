@@ -8,6 +8,11 @@ import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
+/*
+ * Clase que contiene métodos para probar todos los métodos
+ * de la clase Jugador.
+ */
+
 import javabeans.Jugador;
 
 class TestJugador {
@@ -107,14 +112,8 @@ class TestJugador {
 		jugDemo.setNumeroTarjetasAmarillas(0);
 		jugDemo.setNumeroTarjetasRojas(0);
 		assertFalse(jugDemo.estaExpulsado());
-
-
-
 		
 	}
 	
-
-	
-
 
 }

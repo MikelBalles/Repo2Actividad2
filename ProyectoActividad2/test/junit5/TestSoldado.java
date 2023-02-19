@@ -10,11 +10,9 @@ import org.junit.jupiter.api.Test;
 
 import javabeans.Soldado;
 
-/**
- * Métodos para probar la clase Soldado.
- * 
- * @author Alejandro
- * @version 1.0
+/*
+ * Clase que contiene pruebas para todos los métodos de la 
+ * clase Soldado
  *
  */
 class TestSoldado {
@@ -24,10 +22,6 @@ class TestSoldado {
 	@BeforeEach
 	void setUp() throws Exception {
 		soldadoDemo = new Soldado();
-		/*
-		soldadoDemo.setEstaMuerto(false);
-		soldadoDemo.setNumeroBalas(5);
-		*/
 	}
 	
 	@AfterEach
@@ -43,7 +37,7 @@ class TestSoldado {
 	void testConstructor() {
 		soldadoDemo = new Soldado(true, 10);
 		assertTrue(soldadoDemo.isEstaMuerto());
-		assertEquals(soldadoDemo.getNumeroBalas(), 10);
+		assertEquals(10, soldadoDemo.getNumeroBalas());
 	}
 	
 	
@@ -55,7 +49,7 @@ class TestSoldado {
 	void testConstructorVacio() {
 		soldadoDemo = new Soldado();
 		assertFalse(soldadoDemo.isEstaMuerto());
-		assertEquals(soldadoDemo.getNumeroBalas(), 0);
+		assertEquals(0,soldadoDemo.getNumeroBalas());
 	}
 	
 	
@@ -83,7 +77,7 @@ class TestSoldado {
 		
 		soldadoDemo.disparar(sold2);
 		assertTrue(sold2.isEstaMuerto());
-		assertEquals(soldadoDemo.getNumeroBalas(),0);
+		assertEquals(0,soldadoDemo.getNumeroBalas());
 
 		
 		
