@@ -18,10 +18,9 @@ import javabeans.Jugador;
 class TestJugador {
 
 	//Creamos dos jugadores de prueba
-	Jugador jugDemo = null;
-	Jugador jugDemo2 = null;
-	Jugador jugDemo3 = null;
-
+	Jugador jugDemo;
+	Jugador jugDemo2;
+	Jugador jugDemo3;
 
 	
 	//Establecemos null el jugador de prueba antes de cada test.
@@ -34,9 +33,14 @@ class TestJugador {
 	
 	
 	/*
-	 * Utilizamos los métodos constructores para comprobar que el método 
-	 * ponerDorsal() está funcionando correctamente.
+	 * Utilizamos los métodos constructores y 
+	 * el Setter, para comprobar: 
+	 *  - Que no hemos cometido ningún error al reemplazar el método que 
+	 *  genera Eclipse. 
+	 *  - Para comprobar que el método ponerDorsal() que incorporan es correcto. 
+	 *
 	 */
+	
 	//Test de métodos constructores con parámetros
 	@Test
 	void testConstructorParametrosCorrectos() {
@@ -108,7 +112,7 @@ class TestJugador {
 		assertTrue(jugDemo2.estaExpulsado());
 		assertFalse(jugDemo3.estaExpulsado());
 		
-		//Reseteamos jugDemo para que tenga 0 tarjetas
+		//Reseteamos jugDemo para que tenga 0 tarjetas y volvemos a probar.
 		jugDemo.setNumeroTarjetasAmarillas(0);
 		jugDemo.setNumeroTarjetasRojas(0);
 		assertFalse(jugDemo.estaExpulsado());

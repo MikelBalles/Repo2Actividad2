@@ -2,7 +2,7 @@ package javabeans;
 
 /**
  * Esta clase se utiliza para crear objetos de la clase Jugador. Contiene
- * los atributos por los que se define un jugador: dorsal del jugador, 
+ * los atributos por los que se define un jugador:dorsal del jugador,
  * número de tarjetas amarillas y número de tarjetas rojas. 
  * 
  * Contiene también los métodos a los que puede llamar un objeto de la clase
@@ -37,8 +37,8 @@ public class Jugador {
 	 */
 	private int numeroTarjetasRojas;
 	
-	//CONSTRUCTORES
 	
+	//CONSTRUCTORES
 	
 	/**
 	 * Constructor de la clase Jugador con todos los atributos.
@@ -74,6 +74,8 @@ public class Jugador {
 	public int getDorsal() {
 		return dorsal;
 	}
+	
+	
 	/**
 	 * Se establece un número de dorsal para el jugador. Se utiliza el método
 	 * propio ponerDorsal para controlar que el valor esté dentro de los
@@ -86,6 +88,7 @@ public class Jugador {
 	public void setDorsal(int dorsal) {
 		ponerDorsal(dorsal);
 	}
+	
 
 	public int getNumeroTarjetasAmarillas() {
 		return numeroTarjetasAmarillas;
@@ -124,16 +127,16 @@ public class Jugador {
     	}
     }
     
-
-/**
- * Método booleano que indica si un jugador está expulsado del partido o no. 
- * El jugador está expulsado cuando: Su número de tarjetas amarillas sea 
- * 2 o cuando reciba 1 tarjeta roja. 
- * En el resto de casos, el jugador no estará expulsado. 
- * 
- * @return true indica que el jugador es expulsado del partido. false indica
- * que el jugador no está expulsado del partido.
- */
+	
+	/**
+	 * Método booleano que indica si un jugador está expulsado del partido o no. 
+	 * El jugador está expulsado cuando: Su número de tarjetas amarillas sea 
+	 * 2 o cuando reciba 1 tarjeta roja. 
+	 * En el resto de casos, el jugador no estará expulsado. 
+	 * 
+	 * @return true indica que el jugador es expulsado del partido. false indica
+	 * que el jugador no está expulsado del partido.
+	 */
 	public boolean estaExpulsado() {
     	
     	boolean expulsado = false;

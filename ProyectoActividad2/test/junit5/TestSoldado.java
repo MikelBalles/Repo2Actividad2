@@ -17,13 +17,17 @@ import javabeans.Soldado;
  */
 class TestSoldado {
 	
-	private Soldado soldadoDemo = null;
+	private Soldado soldadoDemo;
 	
+	
+	//Creamos un soldado con el constructor vacío antes de cada test
+
 	@BeforeEach
 	void setUp() throws Exception {
 		soldadoDemo = new Soldado();
 	}
 	
+	//Reseteamos el objeto Soldado creado para eliminar cualquier modificación anterior
 	@AfterEach
 	void resetearSoldado () {
 		soldadoDemo = null;
@@ -54,8 +58,8 @@ class TestSoldado {
 	
 	
 	/*
-	 * Comprobamos si el soldado tiene capacidad para disparar. Tanto cuando
-	 * tiene 0 balas como cuando tiene más de 0.
+	 * Comprobamos si el soldado tiene capacidad para disparar solo cuando tiene
+	 * más de 0 balas.
 	 * No pobramos cuando tiene balas negativas porque no está contemplado ese
 	 * comportamiento en el código. 
 	 */
@@ -68,6 +72,11 @@ class TestSoldado {
 		assertFalse(soldadoDemo.puedeDisparar());
 	}
 	
+	/*
+	 * Comprobamos el funcionamiento del metdoo disparar(sol). Debe restar
+	 * una bala al jugador que disparar y cambiar el estado a muerto al jugador
+	 * que ha disparado. 
+	 */
 	@Test
 	void testAccionDisparar() {
 		
