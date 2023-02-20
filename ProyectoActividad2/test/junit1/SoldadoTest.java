@@ -16,7 +16,7 @@ private Soldado p2;
 
 	@BeforeEach
 	void setUp() throws Exception {
-		//crear un soldado para tener uno para cada prueba 
+		//crear dos soldados  para tener uno para poder dispara a otro en el testDispar
 		p1 = new Soldado();
 		p2 = new Soldado();
 	}
