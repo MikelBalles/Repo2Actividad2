@@ -18,19 +18,21 @@ import javabeans.Soldado;
 class TestSoldado {
 	
 	private Soldado soldadoDemo;
-	
+	private Soldado sold2;
 	
 	//Creamos un soldado con el constructor vacío antes de cada test
 
 	@BeforeEach
 	void setUp() throws Exception {
 		soldadoDemo = new Soldado();
+		sold2 = new Soldado();
 	}
 	
 	//Reseteamos el objeto Soldado creado para eliminar cualquier modificación anterior
 	@AfterEach
 	void resetearSoldado () {
 		soldadoDemo = null;
+		sold2 = null;
 	}
 	
 	
@@ -81,15 +83,15 @@ class TestSoldado {
 	void testAccionDisparar() {
 		
 		//Creamos los soldado que participan
-		soldadoDemo.setNumeroBalas(1);
-		Soldado sold2 = new Soldado(false,5);
 		
-		soldadoDemo.disparar(sold2);
-		assertTrue(sold2.isEstaMuerto());
-		assertEquals(0,soldadoDemo.getNumeroBalas());
-
+		sold2.disparar(soldadoDemo);
+		assertTrue(soldadoDemo.isEstaMuerto());
 		
+		sold2.setNumeroBalas(3);
+		int nb = sold2.getNumeroBalas();
 		
+		sold2.disparar(soldadoDemo);
+		assertEquals(nb -1, sold2.getNumeroBalas());
 		
 		
 	}
