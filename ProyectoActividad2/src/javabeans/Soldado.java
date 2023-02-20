@@ -12,7 +12,10 @@ package javabeans;
  * </ul>
  * 
  * @author Alejandro
- * @version 1.0
+ * @author Mikel
+ * @author Javier
+ * @author Maria
+ * @version 2.0
  *
  */
 
